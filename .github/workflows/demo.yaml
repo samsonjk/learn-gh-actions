@@ -1,0 +1,15 @@
+name: My first Github Action learning
+
+on: push
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Welcome Message
+      run: echo "Welcome to GH-200 learning"
+    - name: List the files
+      run: ls
+    - name: Read the file content
+      run: car README.md
