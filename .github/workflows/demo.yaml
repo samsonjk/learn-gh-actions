@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: Welcome Message
       run: echo "Welcome to GH-200 learning"
+    - name: Checkout Repo
+      uses: actions/checkout@v6
     - name: List the files
       run: ls
     - name: Read the file content
