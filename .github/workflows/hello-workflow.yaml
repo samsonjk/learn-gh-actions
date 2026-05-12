@@ -12,4 +12,13 @@ jobs:
       - name: Print Hello
         run: echo "Hello Github Actions"
 
+      - name: Print Date
+        run: date
+
+      - name: Print OS
+        run: echo "The operating system is ${{ runner.os }}"
+
+      - name: Print branh name
+        run: echo "The current branch is ${{ github.ref_name }}"
+
   
