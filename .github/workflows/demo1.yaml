@@ -15,3 +15,12 @@ jobs:
       run: ls
     - name: Read the file content
       run: cat README.md
+  second-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Second Welcome Message
+        run: echo "This is second welcome message
+      - name: Read the file contents again
+        run: cat README.md
+
