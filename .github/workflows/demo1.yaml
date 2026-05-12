@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Second Welcome Message
-        run: echo "This is second welcome message
+        run: echo "This is second welcome message"
       - name: Read the file contents again
         run: cat README.md
 
