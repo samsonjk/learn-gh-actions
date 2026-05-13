@@ -1,0 +1,16 @@
+# workflow to demo variables
+
+name: Variable Demo
+
+on: push
+
+env:
+  APP_NAME: MyApplication
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print environment varibale
+        run: echo $APP_NAME
