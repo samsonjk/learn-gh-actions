@@ -1,11 +1,12 @@
 # app.py
 
-import os
+from flask import Flask
 
-api_key = os.getenv("MY_API_KEY")
+app = Flask(__name__)
 
-if api_key:
-    print("Secret Loaded Successfully")
-    print(f"API Key Length: {len(api_key)}")
-else:
-    print("Secret Not Found")
+@app.route("/")
+def home():
+    return "Python Docker GitHub Actions Demo"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)

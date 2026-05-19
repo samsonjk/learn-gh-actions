@@ -1,0 +1,28 @@
+# Python Docker Build
+
+name: Python Docker Build
+
+on: push
+
+jobs:
+  docker-build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Image
+        run:  | 
+            docker build -t python-docker-demo .
+
+      - name: Verify Docker Images
+        run:  | 
+            docker images
+
+      - name: Run Docker Container
+        run:  | 
+            docker run -d -p 5000:5000 --name python-demo-container python-docker-demo    
